@@ -1,136 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>You're not alone with this</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            line-height: 1.8;
-            color: #3a3a3a;
-            background: linear-gradient(135deg, #fef6e4 0%, #f3d2c1 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-        
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #fffcf7;
-            padding: 60px 50px;
-            border-radius: 16px;
-            box-shadow: 0 8px 24px rgba(101, 84, 62, 0.12);
-        }
-        
-        h1 {
-            font-size: 2.2em;
-            color: #5d4e37;
-            margin-bottom: 30px;
-            font-weight: 400;
-            line-height: 1.3;
-        }
-        
-        p {
-            font-size: 1.15em;
-            color: #4a4a4a;
-            margin-bottom: 25px;
-            line-height: 1.7;
-        }
-        
-        p.emphasis {
-            font-size: 1.2em;
-            color: #6b5d4f;
-            font-style: italic;
-            margin: 35px 0;
-            padding-left: 20px;
-            border-left: 4px solid #d4a574;
-        }
-        
-        .cta-section {
-            margin-top: 50px;
-            text-align: center;
-            padding: 40px 30px;
-            background: #f9ede0;
-            border-radius: 12px;
-        }
-        
-        .cta-section p {
-            font-size: 1.1em;
-            margin-bottom: 25px;
-            color: #5d4e37;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #8b7355;
-            color: #fffcf7;
-            padding: 16px 40px;
-            font-size: 1.1em;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            font-weight: 500;
-        }
-        
-        .cta-button:hover {
-            background: #6b5d4f;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(107, 93, 79, 0.3);
-        }
-        
-        .quiet-text {
-            font-size: 0.95em;
-            color: #7a7a7a;
-            margin-top: 20px;
-            font-style: italic;
-        }
-        
-        @media (max-width: 600px) {
-            .container {
-                padding: 40px 30px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            p {
-                font-size: 1.05em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Comfort Zone</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+      color: #3a3a3a;
+      background: linear-gradient(135deg, #fef6e4 0%, #f3d2c1 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fffcf7;
+      padding: 56px 46px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(101, 84, 62, 0.12);
+    }
+
+    h1 {
+      font-size: 2.2em;
+      color: #5d4e37;
+      margin-bottom: 14px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .subhead {
+      font-size: 1.15em;
+      color: #4a4a4a;
+      margin-bottom: 18px;
+    }
+
+    .emphasis {
+      font-size: 1.12em;
+      color: #6b5d4f;
+      font-style: italic;
+      margin: 22px 0 26px;
+      padding-left: 18px;
+      border-left: 4px solid #d4a574;
+    }
+
+    .card {
+      margin-top: 26px;
+      background: #f9ede0;
+      border-radius: 12px;
+      padding: 26px 22px;
+      border: 2px solid rgba(212, 165, 116, 0.55);
+    }
+
+    ul {
+      margin: 14px 0 0 20px;
+      color: #5d4e37;
+      line-height: 1.7;
+    }
+
+    li { margin-bottom: 8px; }
+
+    .cta-wrap {
+      text-align: center;
+      margin-top: 22px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #8b7355;
+      color: #fffcf7;
+      padding: 16px 40px;
+      font-size: 1.05em;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: all 0.25s ease;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .cta-button:hover {
+      background: #6b5d4f;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(107, 93, 79, 0.25);
+    }
+
+    .quiet {
+      margin-top: 14px;
+      font-size: 0.95em;
+      color: #7a7a7a;
+      font-style: italic;
+    }
+
+    .tiny {
+      margin-top: 8px;
+      font-size: 0.92em;
+      color: #7a7a7a;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 40px 26px; }
+      h1 { font-size: 1.8em; }
+      .subhead { font-size: 1.05em; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>If AI makes you uneasy, you're in good company</h1>
-        
-        <p>Most people feel this way. The jargon. The hype. The nagging worry that you're already "behind" or that you'll look stupid asking basic questions.</p>
-        
-        <p>Here's the truth: <strong>You're not behind.</strong> You're not broken. And you're definitely not alone.</p>
-        
-        <p>AI doesn't have to feel scary. It doesn't have to be complicated. And you don't need to pretend you understand it when you don't.</p>
-        
-        <p class="emphasis">What if there was a place where you could explore AI at your own pace, with no judgment and no pressure?</p>
-        
-        <p>We're building exactly that. A gentle space where AI feels safe, not overwhelming. Where you can ask "stupid" questions (spoiler: they're not stupid). Where you get to decide if and when you're ready.</p>
-        
-        <p>We're not there yet. But we're working on it.</p>
-        
-        <div class="cta-section">
-            <p>If this sounds like something you'd want, we'd love your help shaping it.</p>
-            
-            <a href="survey.html" class="cta-button">I'd like to help</a>
-            
-            <p class="quiet-text">Just a quick 2-minute conversation. No commitment, no spam.</p>
-        </div>
+  <div class="container">
+    <h1>Curious about AI… but it makes you uneasy?</h1>
+    <p class="subhead">You’re not behind. This is a calm place to explore — at your pace.</p>
+
+    <p class="emphasis">If you’ve avoided AI until now, you’re exactly who this is for.</p>
+
+    <div class="card">
+      <p style="color:#5d4e37; font-size:1.05em;">
+        Two minutes. No jargon. No pressure.
+      </p>
+      <ul>
+        <li>You can’t break anything</li>
+        <li>Your answers shape what we build</li>
+        <li>No spam. No selling your data</li>
+      </ul>
+
+      <div class="cta-wrap">
+        <a class="cta-button" href="survey.html">Help shape the safe version</a>
+        <div class="quiet">A quick 2-minute check-in. Then you’re done.</div>
+        <div class="tiny">AI Comfort Zone — a gentle way to start.</div>
+      </div>
     </div>
+  </div>
 </body>
 </html>
