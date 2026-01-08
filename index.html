@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curious about AI, but it makes you uneasy?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8f0f2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+        }
+        
+        h1 {
+            font-size: 2em;
+            color: #34495e;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        .subhead {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .question {
+            font-size: 1.1em;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .option {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+        
+        .option:hover {
+            background: #e8f4f8;
+            border-color: #81c3d7;
+        }
+        
+        .option input[type="checkbox"] {
+            margin-right: 12px;
+            margin-top: 3px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .option label {
+            cursor: pointer;
+            flex: 1;
+        }
+        
+        .affirm-box {
+            display: none;
+            background: #d4edda;
+            border: 2px solid #9ecfb4;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .affirm-box.show {
+            display: block;
+        }
+        
+        .affirm-box p {
+            color: #155724;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        .email-section {
+            display: none;
+            margin-top: 40px;
+            padding: 30px;
+            background: #f0f8ff;
+            border-radius: 8px;
+            border: 2px solid #b8d4e8;
+        }
+        
+        .email-section.show {
+            display: block;
+        }
+        
+        .email-section h2 {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .email-section p {
+            color: #5a6c7d;
+            margin-bottom: 20px;
+        }
+        
+        input[type="email"] {
+            width: 100%;
+            padding: 14px;
+            font-size: 1em;
+            border: 2px solid #cbd5e0;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            transition: border-color 0.2s;
+        }
+        
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #81c3d7;
+        }
+        
+        .trust-line {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        button {
+            background: #5dade2;
+            color: white;
+            padding: 14px 32px;
+            font-size: 1.05em;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        button:hover {
+            background: #3498db;
+        }
+        
+        button:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Curious about AI, but it makes you uneasy?</h1>
+        <p class="subhead">You're not alone. Most people feel this way. We're building something to help.</p>
+        
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="validationForm">
+            
+            <!-- Question 1 -->
+            <div class="section">
+                <div class="question">What makes AI feel uncomfortable for you?</div>
+                <p style="font-size: 0.95em; color: #7f8c8d; margin-bottom: 15px;">(Choose all that apply)</p>
+                
+                <div class="options">
+                    <div class="option">
+                        <input type="checkbox" name="concerns" value="break-something" id="c1">
+                        <label for="c1">I'm worried I'll break something</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="concerns" value="dont-understand" id="c2">
+                        <label for="c2">I don't understand what's happening behind the scenes</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="concerns" value="look-stupid" id="c3">
+                        <label for="c3">I'm afraid of looking stupid</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="concerns" value="data-trust" id="c4">
+                        <label for="c4">I don't trust how my data is used</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="concerns" value="overwhelmed" id="c5">
+                        <label for="c5">I feel overwhelmed by all the options</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="concerns" value="replace-people" id="c6">
+                        <label for="c6">I'm worried it'll replace people</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="concerns" value="not-tech-person" id="c7">
+                        <label for="c7">I'm just not a 'tech person'</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="section">
+                <div class="question">If AI felt safer to use, what would you want most?</div>
+                
+                <div class="options">
+                    <div class="option">
+                        <input type="checkbox" name="desires" value="gentle-explanation" id="d1">
+                        <label for="d1">Someone to explain things gently</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="desires" value="try-without-pressure" id="d2">
+                        <label for="d2">A place to try AI without pressure</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="desires" value="help-choosing" id="d3">
+                        <label for="d3">Help choosing the right tool</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="desires" value="reassurance" id="d4">
+                        <label for="d4">Reassurance that I'm doing it 'right'</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="desires" value="confidence" id="d5">
+                        <label for="d5">Confidence to use it at work or home</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="desires" value="less-stress" id="d6">
+                        <label for="d6">Honestly… just less stress about it</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Affirmation Box (appears after any selection) -->
+            <div class="affirm-box" id="affirmBox">
+                <p><strong>Thank you for sharing that.</strong></p>
+                <p>These feelings are completely normal. You're not behind, you're not broken, and you're definitely not alone. What you just described is exactly why we're building this—a place where AI feels safe, not scary.</p>
+            </div>
+            
+            <!-- Email Section (appears after affirmation) -->
+            <div class="email-section" id="emailSection">
+                <h2>Want gentle guidance when we open?</h2>
+                <p>We'll send you one email when we're ready—no pressure, no spam, ever.</p>
+                
+                <input type="email" name="email" placeholder="your@email.com" required>
+                
+                <p class="trust-line">No spam. No selling your data. Unsubscribe anytime.</p>
+                
+                <button type="submit">Keep me updated</button>
+            </div>
+            
+        </form>
+    </div>
+    
+    <script>
+        // Show affirmation after any checkbox is clicked
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        const affirmBox = document.getElementById('affirmBox');
+        const emailSection = document.getElementById('emailSection');
+        
+        let affirmShown = false;
+        
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                if (!affirmShown && document.querySelectorAll('input[type="checkbox"]:checked').length > 0) {
+                    affirmBox.classList.add('show');
+                    
+                    // Show email section after a brief pause
+                    setTimeout(() => {
+                        emailSection.classList.add('show');
+                        emailSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 1500);
+                    
+                    affirmShown = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
